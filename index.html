@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Виселица</title>
+    <link rel="stylesheet" href="../HangMan/styles/style.css" />
+  </head>
+  <body>
+    <h1>Виселица</h1>
+    <p>Разгадай слово</p>
+    <section class="main__content">
+      <div class="game">
+        <svg height="250" width="200" class="game__figure">
+          <!-- виселица -->
+          <line x1="60" y1="20" x2="140" y2="20" />
+          <line x1="140" y1="20" x2="140" y2="50" />
+          <line x1="60" y1="20" x2="60" y2="230" />
+          <line x1="20" y1="230" x2="100" y2="230" />
+
+          <!-- голова -->
+          <circle cx="140" cy="70" r="20" class="figure__elem" />
+          <!-- тело -->
+          <line x1="140" y1="90" x2="140" y2="150" class="figure__elem" />
+          <!-- Руки -->
+          <line x1="140" y1="120" x2="120" y2="100" class="figure__elem" />
+          <line x1="140" y1="120" x2="160" y2="100" class="figure__elem" />
+          <!-- Ноги -->
+          <line x1="140" y1="150" x2="120" y2="180" class="figure__elem" />
+          <line x1="140" y1="150" x2="160" y2="180" class="figure__elem" />
+        </svg>
+
+        <div class="popup__desc" id="popup__desc">
+          <div class="popup">
+            <h2 id="game__message"></h2>
+            <button id="play__button">Начать!</button>
+          </div>
+        </div>
+        <div class="incorrect">
+          <div id="incorrect__letters"></div>
+        </div>
+        <div class="word" id="word"></div>
+      </div>
+      <div class="notification" id="notification">
+        <p>Вы уже вводили эту букву</p>
+      </div>
+      <div class="words__list">
+        <button class="collapsible">Открыть подсказку</button>
+        <div class="content">
+          <p>
+            клещ<br />
+            сердце<br />
+            конвеер<br />
+            канава<br />
+            баянист<br />
+            батальон<br />
+            козленок<br />
+            микрофон<br />
+            кипарис<br />
+            саксофон<br />
+            победа<br />
+            путешествие<br />
+            тележка<br />
+            люк<br />
+            заглавие<br />
+            алюминий<br />
+            контора<br />
+            мост<br />
+            скатерть<br />
+            коридор<br />
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="../HangMan/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: cursive;
+    background-color: #000d2a;
+    color: khaki;
+    overflow: hidden;
+}
+h1, p{
+    margin: 20px 0 0;
+    text-align: center;
+    color: khaki;
+}
+
+/* общий контент */
+.main__content {
+    padding-left: calc(50vw - 585px);
+    padding-right: calc(50vw - 585px);
+    display: flex;
+    gap: 150px;
+    justify-content: end;
+}
+/* общий контент */
+
+/* основная игра */
+.game {
+    display: flex;
+    padding: 30px 30px;
+    position: relative;
+    margin: 0;
+    height: 400px;
+    width: 500px;
+}
+.game__figure {
+    fill: transparent;
+    stroke: khaki;
+    stroke-width: 2px;
+    stroke-linecap: round;
+}
+.figure__elem {
+    display: none;
+}
+/* основная игра */
+
+/* отображение слова */
+.incorrect {
+    max-width: 150px;
+    position: absolute;
+    top: 40px;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.incorrect span {
+    font-size: 24px;
+}
+/* отображение слова */
+
+/* буквы */
+.word {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.letter {
+    border-bottom: 3px solid khaki;
+    display: inline-flex;
+    font-size: 30px;
+    align-items: center;
+    justify-content: start;
+    margin: 0 3px;
+    height: 50px;
+    width: 20px;
+}
+/* буквы */
+
+/* оповещение */
+.popup__desc {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup {
+    background-color:rgb(255 235 59 / 85%);
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.);
+    padding: 20px;
+    text-align: center;
+    
+}
+
+.popup button {
+    cursor: pointer;
+    background-color: #fff;
+    color: #000d2a;
+    border: 0;
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+#play__button {
+    border-radius: 5px;
+}
+#play__button:hover {
+    background-color: #000d2a;
+    color: khaki;
+}
+#game__message {
+    color: #000d2a;
+}
+.notification {
+    left: 500px;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 10px 10px 0 0;
+    padding: 15px 20px;
+    position: absolute;
+    bottom: -50px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.notification.show {
+    transform: translateY(-50px);
+}
+/* подсказка */
+.words__list {
+    max-width: 200px;
+    right: 0;
+}
+.collapsible {
+    font-family: cursive;
+    background-color: #000d2a;
+    color: khaki;
+    cursor: pointer;
+    padding: 2px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.content {
+    width: auto;
+    padding: 0 18px;
+    max-height: 0;
+    font-size: 14мpx;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #000d2a;
+}
+/* подсказка */
